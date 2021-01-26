@@ -1,0 +1,13 @@
+version: '3.3'
+services:
+    api_docker:
+      build: ./out_api/api_docker
+      image: erwankerbrat/api_docker
+      container_name: api_docker
+      ports:
+        - "8624:5000" 
+    api_intermediaire:
+      build: ./out_api/api_intermediaire
+      image: erwankerbrat/api_intermediaire
+      ports:
+        - "8625:5000" 
